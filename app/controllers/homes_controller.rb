@@ -3,8 +3,4 @@ class HomesController < ApplicationController
 
   def index
   end
-
-  def by_search
-    require 'rest_client'
-  end
 end

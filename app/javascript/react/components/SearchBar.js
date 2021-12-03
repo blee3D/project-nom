@@ -17,21 +17,9 @@ const SearchBar = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     props.onSubmit(searchTerm["search-term"])
+    e.target.reset();
   }
-
-  const clearForm = (event) => {
-    event.preventDefault()
-    setSearchTerm({
-      "search-term": ""
-    })
-  }
-
-  const testFunc = (event) => {
-    event.preventDefault();
-    handleSubmit(event);
-    clearForm(event);
-  }
-
+  
   return(
     <div className="grid-x grid-margin-x grid-padding-x align-center-middle">
       <div className="search-container cell small-3">
@@ -42,7 +30,7 @@ const SearchBar = (props) => {
               placeholder="Enter an ingredient..."
               onChange={handleChange}
         />
-        <button className="search-button" onClick={testFunc}>Find Recipe</button>
+        <button className="search-button" onClick={handleSubmit}>Find Recipe</button>
       </div>
     </div>    
   )

@@ -5,7 +5,6 @@ const HomeIndexPage = () => {
   const [searchResult, setSearchResult] = useState()
 
   const onSearchSubmit = async (searchTerm) => {
-    console.log(`Hitting the HomeIndexPage ${searchTerm}`)
     const API_KEY = process.env.SPOONACULAR_KEY
 
     try {
