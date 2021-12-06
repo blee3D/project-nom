@@ -17,21 +17,23 @@ const SearchBar = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     props.onSubmit(searchTerm["search-term"])
-    
   }
 
   return(
     <div className="grid-x grid-margin-x grid-padding-x align-center-middle">
-      <div className="search-container cell small-3">
-        <form>
+      <div className="search-container cell small-6">
+        <form className="input-group input-group-rounded">
           <input 
+                className="input-group-field"
                 type="search" 
                 id="search-term" 
                 name="search-term" 
                 placeholder="Enter an ingredient..."
                 onChange={handleChange}
           />
-          <button type="submit" className="search-button" onClick={handleSubmit}>Find Recipe</button>
+          <div className="input-group-button">
+          <input type="submit" className="button search-submit" onClick={handleSubmit} value="Search"/>
+          </div>
         </form>
       </div>
     </div>    
