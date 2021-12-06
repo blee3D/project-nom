@@ -52,13 +52,13 @@ const RecipeShowPage = (props) => {
 
       <div className="recipe-instuctions">
         <h2>Directions</h2>
-        <ul>
+        <ol>
           {instructions.map((i) => {
             return(
               <li key={i.number}>{i.step}</li>
             )
           })}
-        </ul>
+        </ol>
       </div>
 
     </div>

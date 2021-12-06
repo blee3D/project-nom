@@ -15,21 +15,71 @@
  *= require_self
 
  */
-.search-container {
-  background-color: #FFF;
-  position: relative;
+
+ .top-bar {
+   height: 3em;
+ }
+
+ .dropdown {
+  height: 3em;
+ }
+
+.menu a:hover {
+  color: #FEDE00;
 }
-.search-box {
-  background-color: transparent;
-  outline: none;
-  height: 35px;
-  font-size: 15px;
-  border: 0;
-  width: 100%;
+
+a {
+  color: white;
 }
-.search-button {
-  position: absolute;
-  right: 1.25em;
-  top: .75em;
-  background-color: lightsteelblue;
+
+.search-submit {
+  background-color: #bacc81;
+}
+.search-submit:hover {
+  background-color:#FEDE00;
+}
+
+.parallax-background {
+  height: 100%;
+  background: image-url("../assets/vegetables-background.jpg");
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	background-size: cover;
+	position: fixed;
+	width: 100%;
+}
+
+.intro-text {
+	font-size: 50px;
+	color: #fff;
+	text-align: center;
+	margin-top: 15%;
+}
+
+.parallax-content {
+	max-width: 100%;
+	position: relative;
+  background-color: white;
+}
+
+.recipe-card {
+  margin-bottom: 0;
+}
+
+.recipe-card-title {
+  font-weight: bold;
+  font-size: 1.25em;
+  margin-bottom: 0;
+}
+
+.recipe-card-author {
+  font-size: 1em;
+  font-size: 0.85em;
+}
+
+.recipe-card-details {
+  font-size: 0.75em;
+  margin-bottom: 0;
 }

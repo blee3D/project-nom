@@ -9,7 +9,7 @@ const HomeIndexPage = () => {
     const API_KEY = process.env.SPOONACULAR_KEY
 
     try {
-      const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${searchTerm}&apiKey=${API_KEY}&number=2&addRecipeInformation=true&instructionsRequired=true&includeIngredients`)
+      const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${searchTerm}&apiKey=${API_KEY}&number=12&addRecipeInformation=true&instructionsRequired=true&includeIngredients`)
       if (!response.ok) {
         throw(new Error(`${response.status}: ${response.statusText}`))
       }
@@ -37,16 +37,23 @@ const HomeIndexPage = () => {
       )
     })
   }
-  
+
   return(
-    <div>
+  <div>
+    <div className="parallax-background">
+      <div className="intro-text">
         <SearchBar onSubmit={onSearchSubmit}/>
-        <div className="grid-container">
-          <div className="grid-x grid-margin-x">
-            {recipeList}
-          </div>
-        </div>
+      </div>
     </div>
+      
+      <div id="search-content" className="parallax-content">
+      <div className="grid-container">
+        <div className="grid-x grid-margin-x">
+          {recipeList}
+        </div>
+      </div>
+    </div>
+  </div>
   )
 }
 
