@@ -32,12 +32,26 @@ a {
   color: white;
 }
 
+.recipe-source {
+  color: grey;
+  font-size: 0.75em;
+}
+
+.recipe-source-url {
+  color: grey;
+  font-size: 1em;
+}
+
 .search-submit {
   background-color: #bacc81;
 }
 
 .search-submit:hover {
   background-color:#FEDE00;
+}
+
+ul.nobullet {
+  list-style-type: none;
 }
 
 .parallax-background {

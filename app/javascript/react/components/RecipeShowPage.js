@@ -31,7 +31,11 @@ const RecipeShowPage = (props) => {
       <div className="recipe-heading">
         <h1 className="recipe-heading-title">{recipe.title}</h1>
         <p>By {recipe.sourceName}</p>
+      </div>
+
+      <div className="recipe-image-section" align="left">
         <img className="recipe-image" src={recipe.image}/>
+        <h6 className="recipe-source">Image Source: <a className="recipe-source-url" href={recipe.sourceUrl}>{recipe.sourceName}</a></h6>
       </div>
 
       <div className="recipe-info">
@@ -41,16 +45,16 @@ const RecipeShowPage = (props) => {
 
       <div className="recipe-ingredients">
         <h2>Ingredients</h2>
-        <ul>
+        <ul className="nobullet">
           {ingredients.map((i) => {
             return(
-              <li key={i.id}>{i.originalString}</li>  
+              <li key={i.id}><input type="checkbox"/> {i.originalString}</li>  
             )
           })}
         </ul>
       </div>
 
-      <div className="recipe-instuctions">
+      <div className="recipe-directions">
         <h2>Directions</h2>
         <ol>
           {instructions.map((i) => {
