@@ -25,6 +25,7 @@ module RailsStaffGroupProject
     config.load_defaults 5.2
 
     # Configuration for the application, engines, and railties goes here.
+    config.serve_static_assets = true
     #
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
