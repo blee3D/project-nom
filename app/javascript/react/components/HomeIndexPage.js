@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import SearchBar from './SearchBar'
+import RecipeResultTile from './RecipeResultTile'
 
 const HomeIndexPage = () => {
   const [searchResult, setSearchResult] = useState()
@@ -23,14 +24,16 @@ const HomeIndexPage = () => {
   let recipeList;
   if (searchResult) {
     recipeList = searchResult.map ((recipe) => {
-
       return(
-        <div className="callout cell small-4">
-          <p className="text-center">{recipe.title}</p>
-          <img src={recipe.image}/>
-          <li>Cook Time: {recipe.readyInMinutes} minutes</li>
-          <li>Servings: {recipe.servings}</li>
-        </div>
+        <RecipeResultTile 
+          key={recipe.id}
+          id={recipe.id}
+          title={recipe.title}
+          image={recipe.image}
+          cookTime={recipe.readyInMinutes}  
+          servings={recipe.servings}
+          sourceName={recipe.sourceName}
+        />
       )
     })
   }
