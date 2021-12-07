@@ -93,7 +93,7 @@ ul.nobullet {
 
 .parallax-background {
   height: 100%;
-  background: asset-url("../assets/vegetables-background.jpg");
+  background-image: asset-url("../assets/vegetables-background.jpg");
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
@@ -103,7 +103,11 @@ ul.nobullet {
 	width: 100%;
 }
 
-.intro-text {
+.nom-logo {
+  text-align: center;
+}
+
+.para-search-bar {
 	font-size: 50px;
 	color: #fff;
 	text-align: center;

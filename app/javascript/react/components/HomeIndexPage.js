@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import SearchBar from './SearchBar'
 import RecipeResultTile from './RecipeResultTile'
+import Image from "../../../assets/images/project-nom-logo.png"
 
 const HomeIndexPage = () => {
   const [searchResult, setSearchResult] = useState()
@@ -14,7 +15,6 @@ const HomeIndexPage = () => {
         throw(new Error(`${response.status}: ${response.statusText}`))
       }
       const searchData = await response.json()
-      console.log(searchData.results)
       setSearchResult(searchData.results)
     } catch(err) {
       console.error(`Error in fetch: ${err.message}`)
@@ -41,7 +41,10 @@ const HomeIndexPage = () => {
   return(
   <div>
     <div className="parallax-background">
-      <div className="intro-text">
+      <div className="para-search-bar">
+      <div className="nom-logo">    
+        <img src={Image}/>
+      </div>
         <SearchBar onSubmit={onSearchSubmit}/>
       </div>
     </div>
