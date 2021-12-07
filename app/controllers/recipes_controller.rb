@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  # feel free to replace this controller
+  # before_action :authenticate_user!
 
   def index
   end

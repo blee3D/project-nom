@@ -16,20 +16,47 @@
 
  */
 
- .top-bar {
+.top-bar {
    height: 3em;
- }
+}
 
- .dropdown {
+.dropdown {
   height: 3em;
- }
+}
 
 .menu a:hover {
   color: #FEDE00;
 }
 
+.landing-container {
+  height: 30em;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.devise-page {
+  width: 30em;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.landing-intro {
+  width: 40em;
+}
+
+body{
+  background-image: asset-url("../assets/vegetables-background.jpg");
+  background-size: cover;
+}
+
 a {
   color: white;
+}
+
+.devise-link {
+  color: lightseagreen;
 }
 
 .recipe-source {
@@ -48,6 +75,16 @@ a {
 
 .search-submit:hover {
   background-color:#FEDE00;
+}
+
+.user-auth {
+  background-color: #bacc81;
+  font-size: 10px;
+}
+
+.user-auth:hover {
+  background-color:#FEDE00;
+  font-size: 10px;
 }
 
 ul.nobullet {
@@ -97,4 +134,8 @@ ul.nobullet {
 .recipe-card-details {
   font-size: 0.75em;
   margin-bottom: 0;
+}
+
+.field {
+  width: 20em;
 }
