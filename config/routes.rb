@@ -5,12 +5,11 @@ Rails.application.routes.draw do
   get "/recipes", to: "recipes#index"
 
   authenticated :user do
-    root 'recipes#index' #-> if user is logged in
-    # resources :controller #-> ONLY available for logged in users
+    root 'recipes#index'
   end
 
   unauthenticated :user do
-    root 'recipes#landing', as: :unauthenticated #-> if user is not logged in
+    root 'recipes#landing', as: :unauthenticated
   end
 
 end
