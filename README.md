@@ -22,7 +22,7 @@ Create PostgreSQL database, and migrate tables:
 bundle exec rake db:create
 bundle exec rake db:migrate
 ```
-Run the following commands, and then visit https://localhost:3000/ in your browser to view the app locally:
+Run the following command, and then visit https://localhost:3000/ in your browser to view the app locally:
 ```
 bundle exec rails s
 ```
