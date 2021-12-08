@@ -14,7 +14,7 @@ Project Nom is a recipe searching web app that integrates Spoonacular API with R
 
 Once you have a local copy of the repo, run the following commands in the terminal:
 ```
-bundle install
+bundle
 yarn install
 ```
 Create PostgreSQL database, and migrate tables:
