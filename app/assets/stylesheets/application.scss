@@ -16,130 +16,140 @@
 
  */
 
-.top-bar {
-   height: 3em;
-}
-
-.dropdown {
+ .top-bar {
   height: 3em;
 }
 
+.dropdown {
+ height: 3em;
+}
+
 .menu a:hover {
-  color: #FEDE00;
+ color: #FEDE00;
 }
 
-.landing-container {
-  height: 30em;
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-}
-
-.devise-page {
-  width: 30em;
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-}
-
-.landing-intro {
-  width: 40em;
-}
-
-body{
-  background-image: asset-url("../assets/vegetables-background.jpg");
+body {
+  background-image: asset-url("vegetables-background.jpg");
   background-size: cover;
 }
 
+.landing-container {
+ margin-top: 15em;
+ display: flex;
+ align-items: center;
+ justify-content: center; 
+}
+
+.devise-page {
+ width: 30em;
+ display: flex;
+ align-items: center;
+ justify-content: center; 
+}
+
+.landing-intro {
+ width: 40em;
+}
+
 a {
-  color: white;
+ color: white;
 }
 
 .devise-link {
-  color: lightseagreen;
+ color: lightseagreen;
 }
 
 .recipe-source {
-  color: grey;
-  font-size: 0.75em;
+ color: grey;
+ font-size: 0.75em;
 }
 
 .recipe-source-url {
-  color: grey;
-  font-size: 1em;
+ color: grey;
+ font-size: 1em;
 }
 
 .search-submit {
-  background-color: #bacc81;
+ background-color: #bacc81;
 }
 
 .search-submit:hover {
-  background-color:#FEDE00;
+ background-color:#FEDE00;
 }
 
 .user-auth {
-  background-color: #bacc81;
-  font-size: 10px;
+ background-color: #bacc81;
+ font-size: 10px;
 }
 
 .user-auth:hover {
-  background-color:#FEDE00;
-  font-size: 10px;
+ background-color:#FEDE00;
+ font-size: 10px;
 }
 
 ul.nobullet {
-  list-style-type: none;
+ list-style-type: none;
 }
 
 .parallax-background {
-  height: 100%;
-  background-image: asset-url("../assets/vegetables-background.jpg");
-	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-	background-size: cover;
-	position: fixed;
-	width: 100%;
+ height: 100%;
+ background-image: asset-url("vegetables-background.jpg");
+ background-repeat: no-repeat;
+ -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+ background-size: cover;
+ position: fixed;
+ width: 100%;
 }
 
 .nom-logo {
-  text-align: center;
+ text-align: center;
+ margin-bottom: 3%;
 }
 
 .para-search-bar {
-	font-size: 50px;
-	color: #fff;
-	text-align: center;
-	margin-top: 15%;
+ font-size: 50px;
+ color: #fff;
+ text-align: center;
+ margin-top: 15%;
 }
 
 .parallax-content {
-	max-width: 100%;
-	position: relative;
-  background-color: white;
+ max-width: 100%;
+ position: relative;
+ background-color: white;
 }
 
 .recipe-card {
-  margin-bottom: 0;
+ margin-bottom: 0;
 }
 
 .recipe-card-title {
-  font-weight: bold;
-  font-size: 1.25em;
-  margin-bottom: 0;
+ font-weight: bold;
+ font-size: 1.25em;
+ margin-bottom: 0;
 }
 
 .recipe-card-author {
-  font-size: 1em;
-  font-size: 0.85em;
+ font-size: 1em;
+ font-size: 0.85em;
 }
 
 .recipe-card-details {
-  font-size: 0.75em;
-  margin-bottom: 0;
+ font-size: 0.75em;
+ margin-bottom: 0;
 }
 
 .field {
-  width: 20em;
+ width: 20em;
+}
+
+.recipe-heading-wrapper {
+ text-align: center;
+ margin-top: 25%;
+}
+
+p.recipe-detail {
+ margin: 0;
 }
