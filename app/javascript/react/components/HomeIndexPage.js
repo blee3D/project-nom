@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import SearchBar from './SearchBar'
-import RecipeResultTile from './RecipeResultTile'
 import Image from "../../../assets/images/project-nom-logo.png"
+import { Redirect } from "react-router-dom"
 
 const HomeIndexPage = () => {
   const [searchResult, setSearchResult] = useState()
+  const [redirect, setRedirect] = useState(false)
 
   const onSearchSubmit = async (searchTerm) => {
     const API_KEY = process.env.SPOONACULAR_KEY
@@ -15,45 +16,33 @@ const HomeIndexPage = () => {
         throw(new Error(`${response.status}: ${response.statusText}`))
       }
       const searchData = await response.json()
+
       setSearchResult(searchData.results)
+      setRedirect(true)
     } catch(err) {
       console.error(`Error in fetch: ${err.message}`)
     }
   }
 
-  let recipeList;
-  if (searchResult) {
-    recipeList = searchResult.map ((recipe) => {
-      return(
-        <RecipeResultTile 
-          key={recipe.id}
-          id={recipe.id}
-          title={recipe.title}
-          image={recipe.image}
-          cookTime={recipe.readyInMinutes}  
-          servings={recipe.servings}
-          sourceName={recipe.sourceName}
-        />
-      )
-    })
+  if (redirect) {
+    return <Redirect 
+              to={{
+                pathname: '/results',
+                state: {
+                  searchResult
+                }
+              }}
+            />
   }
-
+  
   return(
   <div>
     <div className="parallax-background">
       <div className="para-search-bar">
-      <div className="nom-logo">    
-        <img src={Image}/>
-      </div>
-        <SearchBar onSubmit={onSearchSubmit}/>
-      </div>
-    </div>
-      
-      <div id="search-content" className="parallax-content">
-      <div className="grid-container">
-        <div className="grid-x grid-margin-x">
-          {recipeList}
+        <div className="nom-logo">    
+          <img src={Image}/>
         </div>
+        <SearchBar onSubmit={onSearchSubmit}/>
       </div>
     </div>
   </div>

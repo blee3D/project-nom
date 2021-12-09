@@ -29,21 +29,25 @@ const RecipeShowPage = (props) => {
   return(
     <div className="callout">
       <div className="grid-container">
-        <div className="recipe-heading">
-          <h1 className="recipe-heading-title">{recipe.title}</h1>
-          <p>By {recipe.sourceName}</p>
+        <div className="grid-x">
+          <div className="recipe-heading-container cell small-6" align="left">
+            <div className="recipe-heading-wrapper">
+              <h1 className="recipe-heading-title">{recipe.title}</h1>
+              <p>By {recipe.sourceName}</p>
+              <center>
+              <div className="recipe-details-container">
+                <p className="recipe-detail"><b>Servings:</b> {recipe.servings} </p>
+                <p className="recipe-detail"><b>Total time:</b> {recipe.readyInMinutes} minutes</p>
+              </div>
+              </center>
+            </div>
+          </div>
+          <div className="recipe-image-container cell small-6" align="right">
+            <img className="recipe-image" align="right" src={recipe.image}/>
+            <h6 className="recipe-source" align="center">Image Source: <a className="recipe-source-url" href={recipe.sourceUrl}>{recipe.sourceName}</a></h6>
+          </div>
         </div>
-
-        <div className="recipe-image-section" align="left">
-          <img className="recipe-image" src={recipe.image}/>
-          <h6 className="recipe-source">Image Source: <a className="recipe-source-url" href={recipe.sourceUrl}>{recipe.sourceName}</a></h6>
-        </div>
-
-        <div className="recipe-info">
-          <p>Servings: {recipe.servings} </p>
-          <p>Total time: {recipe.readyInMinutes} minutes</p>
-        </div>
-
+        <hr/>
         <div className="recipe-ingredients">
           <h2>Ingredients</h2>
           <ul className="nobullet">
@@ -54,7 +58,7 @@ const RecipeShowPage = (props) => {
             })}
           </ul>
         </div>
-
+        <hr/>
         <div className="recipe-directions">
           <h2>Directions</h2>
           <ol>
@@ -66,6 +70,7 @@ const RecipeShowPage = (props) => {
           </ol>
         </div>
       </div>
+
     </div>
   )
 }
